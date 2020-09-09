@@ -16,16 +16,16 @@ class App extends React.Component {
     }
 
     render() {
-    return(
+        return(
         <BrowserRouter>
+            <h1 className='Title'>The Video Player</h1>
             <div className='App'>
                 <div className='left'>
                     <Route path={"/:vid"} render={(props) => {
-                        console.log(true)
-                        return <PlayerSection {...props}/>}}/>
+                        return <PlayerSection currentId={this.state.id} {...props}/>}}/>
                 </div>
                 <div className='right'>
-                    <Route path={"/:vid"} render={(props) => <PlaylistSection parentState={this.changeId} {...props}/>}/>
+                    <Route path={`/`} render={(props) => <PlaylistSection parentState={this.changeId} {...props}/>} videoId={this.state.id}/>
                 </div>
             </div>
         </BrowserRouter>

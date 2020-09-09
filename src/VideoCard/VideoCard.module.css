@@ -1,6 +1,7 @@
 .link {
     text-decoration: none;
     margin-bottom: 24px;
+    border: 2px solid transparent;
 }
 
 .CardContainer {
@@ -8,7 +9,6 @@
     border-radius: 8px;
     margin-bottom: 24px;
     cursor: pointer;
-    border: 2px solid transparent;
 }
 
 .Yellow {
