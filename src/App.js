@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route , BrowserRouter} from "react-router-dom";
+import { Route , BrowserRouter } from "react-router-dom";
 import './App.css';
 
 import PlayerSection from './PlayerSection/PlayerSection'
@@ -18,14 +18,16 @@ class App extends React.Component {
     render() {
     return(
         <BrowserRouter>
-            {/*<div className='App'>*/}
-            {/*    <div className='left'>*/}
-                    <Route path={"/:vid"} render={(props) => <PlayerSection {...props}/>}/>
-                {/*</div>*/}
-                {/*<div className='right'>*/}
+            <div className='App'>
+                <div className='left'>
+                    <Route path={"/:vid"} render={(props) => {
+                        console.log(true)
+                        return <PlayerSection {...props}/>}}/>
+                </div>
+                <div className='right'>
                     <Route path={"/:vid"} render={(props) => <PlaylistSection parentState={this.changeId} {...props}/>}/>
-            {/*    </div>*/}
-            {/*</div>*/}
+                </div>
+            </div>
         </BrowserRouter>
     )}
 }
