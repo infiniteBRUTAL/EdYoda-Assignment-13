@@ -25,7 +25,7 @@ class App extends React.Component {
                         return <PlayerSection currentId={this.state.id} {...props}/>}}/>
                 </div>
                 <div className='right'>
-                    <Route path={`/`} render={(props) => <PlaylistSection parentState={this.changeId} {...props}/>} videoId={this.state.id}/>
+                    <Route path={`/:vid`} render={(props) => <PlaylistSection parentState={this.changeId} {...props} videoId={this.state.id} />} />
                 </div>
             </div>
         </BrowserRouter>

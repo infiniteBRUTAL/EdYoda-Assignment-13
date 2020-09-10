@@ -6,7 +6,7 @@ body {
 .App {
   margin: 0;
   display: flex;
-  height: 90vh;
+  height: 88vh;
   box-sizing: border-box;
   padding: 0 10% 4% 10%;
   border-radius: 8px;
@@ -30,4 +30,5 @@ body {
   font-size: 48px;
   text-align: center;
   color: #FCD562;
+  font-weight: 600;
 }
