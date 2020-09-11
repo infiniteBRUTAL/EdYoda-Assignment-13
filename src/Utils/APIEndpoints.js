@@ -1,0 +1,1 @@
+export const PLAYLIST_API = 'https://5d76bf96515d1a0014085cf9.mockapi.io/playlist'export const VIDEO_DATA = 'https://5d76bf96515d1a0014085cf9.mockapi.io/video/'

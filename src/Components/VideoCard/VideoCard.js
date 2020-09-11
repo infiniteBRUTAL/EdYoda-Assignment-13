@@ -15,7 +15,7 @@ class VideoCard extends React.Component {
     render() {
         return(
             <Link to={`/${this.props.vidId}`}  className={classes.Link}>
-                <div onClick={this.handleClick} className={`${classes.link} ${this.props.match.params.vid == this.props.vidId ? classes.Yellow : null}`} >
+                <div onClick={this.handleClick} className={`${classes.link} ${this.props.videoId == this.props.vidId ? classes.Yellow : null}`} >
                     <img className={classes.Thumbnail} src={this.props.thumbnail} alt="Video Thumbnail" />
                     <h3 className={classes.Title}>{this.props.title}</h3>
                 </div>

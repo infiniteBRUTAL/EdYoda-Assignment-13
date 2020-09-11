@@ -2,8 +2,8 @@ import React from 'react';
 import { Route , BrowserRouter } from "react-router-dom";
 import './App.css';
 
-import PlayerSection from './PlayerSection/PlayerSection'
-import PlaylistSection from './PlaylistSection/PlaylistSection'
+import PlayerSection from './Components/PlayerSection/PlayerSection'
+import PlaylistSection from './Components/PlaylistSection/PlaylistSection'
 
 class App extends React.Component {
 
@@ -25,7 +25,7 @@ class App extends React.Component {
                         return <PlayerSection currentId={this.state.id} {...props}/>}}/>
                 </div>
                 <div className='right'>
-                    <Route path={`/:vid`} render={(props) => <PlaylistSection parentState={this.changeId} {...props} videoId={this.state.id} />} />
+                    <Route path={`/`} render={(props) => <PlaylistSection parentState={this.changeId} {...props} videoId={props.location.pathname.split('/')[1]} />} />
                 </div>
             </div>
         </BrowserRouter>
